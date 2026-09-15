@@ -7,13 +7,38 @@ fun main() {
     println("Hello, " + name + "!")
 
     for (i in 1..5) {
-        val re = calc(i,i);
+        val re : Int = calc(i,i);
         //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         println("i = $i dan pangkat = $re")
+
+        val e: String = "faisal"
+        println("hello $e !")
     }
+
+    collect()
 }
 
 fun calc(a: Int, b: Int): Int {
     return a * b
+}
+fun collect(){
+    val collector = Collection();
+    val data = collector.listName();
+    data.add("Doni")
+    println(data);
+
+    data.remove("Budi")
+    println(data);
+
+
+
+    // Read only list
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println(readOnlyShapes)
+    // [triangle, square, circle]
+
+    // Mutable list with explicit type declaration
+    val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+    println(shapes)
 }
