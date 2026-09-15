@@ -45,6 +45,9 @@ fun collect(){
     mapNama.remove("K3513003")
     mapNama["K3513052"] = "Wasil"
 
-    println(mapNama)
+    for ((id, name) in mapNama.toSortedMap()) {
+        println("$id : $name")
+    }
+
 
 }
