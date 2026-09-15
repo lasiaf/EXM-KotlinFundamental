@@ -1,4 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val name = "Kotlin"
@@ -24,21 +23,28 @@ fun calc(a: Int, b: Int): Int {
 }
 fun collect(){
     val collector = Collection();
-    val data = collector.listName();
+    val data = collector.listMutableName();
     data.add("Doni")
     println(data);
 
     data.remove("Budi")
     println(data);
+    println(data.first())
+    println(data.last())
 
+    val numSet= collector.setName();
+    println(numSet);
 
+    val numSetMuta= collector.setMutableName();
+    numSetMuta.add(29)
+    println(numSetMuta);
 
-    // Read only list
-    val readOnlyShapes = listOf("triangle", "square", "circle")
-    println(readOnlyShapes)
-    // [triangle, square, circle]
+    val mapNama = collector.mapMutableName();
+    println(mapNama)
+    println(mapNama["K3513020"])
+    mapNama.remove("K3513003")
+    mapNama["K3513052"] = "Wasil"
 
-    // Mutable list with explicit type declaration
-    val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
-    println(shapes)
+    println(mapNama)
+
 }
