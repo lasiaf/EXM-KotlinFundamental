@@ -1,27 +1,33 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
-
-    for (i in 1..5) {
-        val re : Int = calc(i,i);
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i dan pangkat = $re")
-
-        val e: String = "faisal"
-        println("hello $e !")
-    }
-
     collect()
+    condition();
+    loops();
+    funcSum(8, 5)
 }
 
 fun calc(a: Int, b: Int): Int {
     return a * b
 }
+fun condition(){
+    println("============ CONDITION ============");
+
+    val conditionData = Conditions()
+    val data = conditionData.conIf((4))
+    println("IF CONDITIONS : $data");
+    println("WHEN CONDITIONS : ${conditionData.conWhen((4))}");
+
+}
+fun loops() {
+    println("============ LOOPS ============");
+    val loopData = Loops()
+    loopData.loopFor(9)
+    loopData.loopWhile(5)
+}
 fun collect(){
+    println("============ COLLECTION ============");
+    val loopData = Loops()
+
     val collector = Collection();
     val data = collector.listMutableName();
     data.add("Doni")
@@ -45,9 +51,15 @@ fun collect(){
     mapNama.remove("K3513003")
     mapNama["K3513052"] = "Wasil"
 
-    for ((id, name) in mapNama.toSortedMap()) {
-        println("$id : $name")
-    }
 
+    loopData.loopCollection(mapNama.toSortedMap())
+}
+fun funcSum(x: Int, y: Int): Int {
+    val res : Int = x + y;
+    val nama : String = "Muhammad Harr"
+    println("============ FUNCTION ============");
+    println(res)
+    println("Lambda Expression : ${nama.uppercase()}");
 
+    return x + y
 }
