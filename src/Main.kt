@@ -3,7 +3,8 @@ fun main() {
     collect()
     condition();
     loops();
-    funcSum(8, 5)
+    funcSum(8, 5);
+    classSample();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -62,4 +63,22 @@ fun funcSum(x: Int, y: Int): Int {
     println("Lambda Expression : ${nama.uppercase()}");
 
     return x + y
+}
+
+fun classSample() {
+    println("============ CLASS ============");
+
+    val classSampleData = ClassSample(4, "fais@gmail.com")
+    println(classSampleData.category);
+    println(classSampleData.square());
+    classSampleData.justPrint()
+
+    val tryClassData = tryClass(2, "muhfais@outlook.com")
+    tryClassData.printId();
+}
+
+class tryClass(val id: Int, var email: String) {
+    fun printId() {
+        println(id)
+    }
 }
