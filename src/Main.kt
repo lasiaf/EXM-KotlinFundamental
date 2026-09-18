@@ -5,6 +5,7 @@ fun main() {
     loops();
     funcSum(8, 5);
     classSample();
+    nullable();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -72,13 +73,61 @@ fun classSample() {
     println(classSampleData.category);
     println(classSampleData.square());
     classSampleData.justPrint()
+    classSampleData.compare(2,4)
 
     val tryClassData = tryClass(2, "muhfais@outlook.com")
     tryClassData.printId();
+
+    val user = User("Alex", 1)
+    val secondUser = User("Alex", 1)
+    val thirdUser = User("Max", 2)
+
+    println(user.copy())
+    println(user.copy("Max"))
+    println(user.copy(id = 3))
+
 }
 
 class tryClass(val id: Int, var email: String) {
     fun printId() {
-        println(id)
+        println(email)
     }
 }
+
+data class User(val name: String, val id: Int)
+
+fun  nullable() {
+    println("============ NULLABLE ============");
+
+    var neverNull: String = "This can't be null"
+    //neverNull = null //ERROR kkarena tidak boleh bernilai null
+
+    var nullable: String? = "You can keep a null here"
+    nullable = null
+
+    fun lengthString(maybeString: String?): Int? = maybeString?.length
+
+    fun strLength(notNull: String): Int {
+        return notNull.length
+    }
+
+    fun describeString(maybeString: String?): String {
+        if (maybeString != null && maybeString.length > 0) {
+            return "String of length ${maybeString.length}"
+        } else {
+            return "Empty or null string"
+        }
+    }
+
+    println(strLength(neverNull))
+    val nullString: String? = null
+
+    println(describeString(nullString))
+    println(lengthString(nullString))
+    println(nullString?.uppercase())
+    println(nullString?.length ?: 0)
+
+    //println(strLength(nullable)) //ERROR kkarena tidak boleh bernilai null
+}
+
+

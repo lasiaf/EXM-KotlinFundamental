@@ -11,4 +11,8 @@ class ClassSample(val id: Int, var email: String) {
     fun justPrint(){
         println("Just Print")
     }
+
+    fun compare(a : Int, b : Int){
+        println("a == b: ${a == b}")
+    }
 }
