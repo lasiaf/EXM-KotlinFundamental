@@ -7,6 +7,7 @@ fun main() {
     classSample();
     nullable();
     inHeritance();
+    interfaces();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -158,5 +159,17 @@ fun inHeritance(){
     mobilListrik.bergerak()
     mobilListrik.klakson()
     mobilListrik.charge()
+}
+fun interfaces () {
+    println("============ INTERFACE ============");
+    val kucing = AnakKucing()
+    kucing.makan()
+    kucing.bersuara()
+
+    println()
+
+    val anjing = Anjing()
+    anjing.makan()
+    anjing.bersuara()
 }
 
