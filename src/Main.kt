@@ -6,6 +6,7 @@ fun main() {
     funcSum(8, 5);
     classSample();
     nullable();
+    inHeritance();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -130,4 +131,32 @@ fun  nullable() {
     //println(strLength(nullable)) //ERROR kkarena tidak boleh bernilai null
 }
 
+fun inHeritance(){
+    println("============ INHERITANCE ============");
+    val hewan = Hewan("Hewan Umum")
+    hewan.bersuara()
+
+    val kucing = Kucing("Mimi")
+    kucing.bersuara()
+
+
+
+    val kendaraan = Kendaraan("Generic")
+    kendaraan.bergerak()
+    println()
+
+    val mobil = Mobil("Toyota", 4)
+
+    mobil.info()
+    mobil.bergerak()
+    mobil.klakson()
+    println()
+
+    val mobilListrik = MobilListrik("Tesla", 4, 75)
+
+    mobilListrik.info()
+    mobilListrik.bergerak()
+    mobilListrik.klakson()
+    mobilListrik.charge()
+}
 
