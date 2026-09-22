@@ -8,6 +8,7 @@ fun main() {
     nullable();
     inHeritance();
     interfaces();
+    abstrak();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -169,6 +170,18 @@ fun interfaces () {
     println()
 
     val anjing = Anjing()
+    anjing.makan()
+    anjing.bersuara()
+}
+fun abstrak () {
+    println("============ ABSTRAK ===========");
+
+    val kucing = IndukKucing("Mimi")
+    kucing.makan()
+    kucing.bersuara()
+    println()
+
+    val anjing = IndukAnjing("Bobbi")
     anjing.makan()
     anjing.bersuara()
 }
