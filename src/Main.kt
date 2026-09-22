@@ -10,6 +10,7 @@ fun main() {
     interfaces();
     abstrak();
     enkapsulasi();
+    coroutines();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -202,5 +203,19 @@ fun enkapsulasi(){
 
     rekening.tarik(2_000_000.0)
     rekening.lihatSaldo()
+}
+
+fun coroutines(){
+
+    println("============ COROUTINE ==========");
+
+    val coroutineRun = CoroutineRun()
+    coroutineRun.proses()
+
+    val total = coroutineRun.hitungTotal()
+    println("Total: $total")
+
+
+    println("Program selesai")
 }
 
