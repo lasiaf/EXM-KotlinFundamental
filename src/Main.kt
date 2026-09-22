@@ -11,6 +11,7 @@ fun main() {
     abstrak();
     enkapsulasi();
     coroutines();
+    polimorfisme();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -203,6 +204,29 @@ fun enkapsulasi(){
 
     rekening.tarik(2_000_000.0)
     rekening.lihatSaldo()
+}
+
+fun polimorfisme(){
+    println("============ POLIMORFISME ==========");
+
+    val daftarHewan: List<Burung> = listOf(
+        Murai("Boy"),
+        Pinguin("Chiko")
+    )
+
+    for (burung in daftarHewan) {
+        burung.habitat()
+    }
+
+    val pegawaiList: List<Pegawai> = listOf(
+        Programmer(),
+        Manager()
+    )
+
+    for (pegawai in pegawaiList) {
+        pegawai.hitungGaji()
+
+    }
 }
 
 fun coroutines(){
