@@ -12,6 +12,7 @@ fun main() {
     enkapsulasi();
     coroutines();
     polimorfisme();
+    functionalprogramming();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -229,6 +230,37 @@ fun polimorfisme(){
     }
 }
 
+fun functionalprogramming(){
+    println("============ FUNCTIONAL ==========");
+
+    // Lambda
+    contohLambda()
+    println()
+
+    // Higher Order Function
+    val hasilTambah = hitung(10, 20) { a, b ->
+        a + b
+    }
+
+    val hasilKali = hitung(10, 20) { a, b ->
+        a * b
+    }
+
+    println("Higher Order Function:")
+    println("Tambah: $hasilTambah")
+    println("Kali: $hasilKali")
+    println()
+
+    // Filter
+    contohFilter()
+
+    // Map
+    contohMap()
+
+    // Reduce
+    contohReduce()
+}
+
 fun coroutines(){
 
     println("============ COROUTINE ==========");
@@ -242,4 +274,5 @@ fun coroutines(){
 
     println("Program selesai")
 }
+
 
