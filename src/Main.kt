@@ -9,6 +9,7 @@ fun main() {
     inHeritance();
     interfaces();
     abstrak();
+    enkapsulasi();
 }
 
 fun calc(a: Int, b: Int): Int {
@@ -184,5 +185,22 @@ fun abstrak () {
     val anjing = IndukAnjing("Bobbi")
     anjing.makan()
     anjing.bersuara()
+}
+
+fun enkapsulasi(){
+    println("============ ENKAPSULASI ==========");
+
+    val rekening = RekeningBank("Faisal")
+
+    rekening.lihatSaldo()
+
+    rekening.setor(1_000_000.0)
+    rekening.lihatSaldo()
+
+    rekening.tarik(300_000.0)
+    rekening.lihatSaldo()
+
+    rekening.tarik(2_000_000.0)
+    rekening.lihatSaldo()
 }
 
